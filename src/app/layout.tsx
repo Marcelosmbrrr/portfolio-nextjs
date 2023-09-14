@@ -19,13 +19,13 @@ export default function RootLayout({
 }) {
     return (
         <html lang="pt-br">
-            <body className={inter.className}>
-                <ThemeProvider>
-                    <UserProvider>
+            <ThemeProvider>
+                <UserProvider>
+                    <body className={inter.className}>
                         {children}
-                    </UserProvider>
-                </ThemeProvider>
-            </body>
-        </html>
+                    </body>
+                </UserProvider>
+            </ThemeProvider>
+        </html >
     )
 }

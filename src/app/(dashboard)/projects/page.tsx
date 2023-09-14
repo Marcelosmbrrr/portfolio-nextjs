@@ -1,8 +1,8 @@
 'use client'
 
 import * as React from 'react';
-import { useSnackbar } from 'notistack';
 import { useUser } from '@auth0/nextjs-auth0/client';
+import { SnackbarProvider, enqueueSnackbar } from 'notistack'
 // Custom
 import { api } from '@/services/api';
 import { ProjectCard } from '@/components/projects-page/project-card/ProjectCard';
@@ -29,7 +29,6 @@ export default function Projects() {
     const [pending, setPending] = React.useState<boolean>(true);
     // Context
     const { user } = useUser();
-    const { enqueueSnackbar } = useSnackbar();
 
     React.useEffect(() => {
         fetchData();
@@ -89,6 +88,7 @@ export default function Projects() {
 
     return (
         <>
+            <SnackbarProvider />
             <div className='flex flex-wrap gap-1 py-5 border-y'>
                 <div className='mx-auto max-w-7xl  grow basis-96'>
                     <div>
