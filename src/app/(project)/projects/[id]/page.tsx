@@ -18,7 +18,7 @@ interface Project {
     created_at: string;
 }
 
-export default function Project(props: { id: string }) {
+export default function Project() {
 
     const [project, setProject] = React.useState<Project>({} as Project);
     const [pending, setPending] = React.useState<boolean>(true);
