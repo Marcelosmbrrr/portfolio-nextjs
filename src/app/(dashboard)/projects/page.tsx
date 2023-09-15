@@ -81,7 +81,7 @@ export default function Projects() {
                         </div>
                         <div>
                             <p className='text-md text-stone-700 dark:text-white text-justify'>
-                                Aqui estão listados os projetos que desenvolvi e que estou desenvolvendo. Clique em um projeto para selecioná-lo. Os que foram publicados podem ser visualizados clicando no botão 'Visualizar'.
+                                Aqui estão listados os projetos que desenvolvi e que estou desenvolvendo. Clique em um projeto para selecioná-lo. Os que foram publicados podem ser visualizados clicando no botão &apos;Visualizar&apos;.
                             </p>
                         </div>
                     </div>
