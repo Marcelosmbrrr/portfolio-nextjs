@@ -6,9 +6,22 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { useSnackbar } from 'notistack';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0/client';
+import { useParams } from 'next/navigation'
 // Custom
 import { useTheme } from '@/context/ThemeContext';
 import { api } from '@/services/api';
+
+interface Project {
+    id: string;
+    published: boolean;
+    image: string;
+    name: string;
+    technologies: string;
+    description: string;
+    content: string;
+    stage: string;
+    created_at: string;
+}
 
 const schema = yup.object({
     name: yup.string().max(50, 'Deve ter no máximo 50 caracteres').required('O nome do projeto é obrigatório.'),
@@ -25,16 +38,48 @@ type FormData = yup.InferType<typeof schema>;
 export default withPageAuthRequired(function Project() {
 
     const [pending, setPending] = React.useState<boolean>(true);
+    const [error, setError] = React.useState<boolean>(false);
     const imgRef = React.useRef<HTMLImageElement>(null);
     // Context
     const { ThemeButton } = useTheme();
     const { enqueueSnackbar } = useSnackbar();
+    const params = useParams()
 
     const { register, handleSubmit, formState: { errors }, setValue, getValues, watch } = useForm<FormData>({
         resolver: yupResolver(schema)
     });
 
     watch('image');
+
+    React.useEffect(() => {
+        fetchData();
+    }, []);
+
+    function fetchData() {
+        api.get(`api/projects/${params.id}`)
+            .then(response => {
+                setFormValues(response.data.project);
+            })
+            .catch(e => {
+                console.error(e, e.stack);
+                setError(true);
+            })
+            .finally(() => {
+                setPending(false);
+            })
+    }
+
+    function setFormValues(project: Project) {
+        setValue('name', project.name);
+        setValue('description', project.description);
+        setValue('technologies', project.technologies);
+        setValue('stage', project.stage);
+        setValue('published', project.published);
+        setValue('content', project.content);
+        setValue('image', project.image);
+        // @ts-ignore
+        imgRef.current.style.backgroundImage = `url(${project.image})`;
+    }
 
     function onSubmit(form: FormData) {
         try {
@@ -124,7 +169,7 @@ export default withPageAuthRequired(function Project() {
                             </div>
                             <div className='flex justify-end mb-2'>
                                 <button type='submit' className="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white dark:bg-stone-950 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-cyan-400 dark:hover:text-cyan-400 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700">
-                                    Criar
+                                    Atualizar
                                 </button>
                             </div>
                         </div>
@@ -145,7 +190,7 @@ export default withPageAuthRequired(function Project() {
                         </div>
                     </div>
                     <div className='mt-2'>
-                        <textarea {...register('content')} rows={20} className='w-full p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white border' placeholder='Informe o texto acerca do projeto'></textarea>
+                        <textarea {...register('content')} rows={20} className='w-full p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white border text-justify' placeholder='Informe o texto acerca do projeto'></textarea>
                         <span className='text-red-500 text-sm'>{errors.content?.message}</span>
                     </div>
                 </div>

@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { useUser } from '@auth0/nextjs-auth0/client';
-import { SnackbarProvider, enqueueSnackbar } from 'notistack'
+import { SnackbarProvider, enqueueSnackbar } from 'notistack';
 // Custom
 import { api } from '@/services/api';
 import { ProjectCard } from '@/components/projects-page/project-card/ProjectCard';
@@ -17,15 +17,16 @@ interface IProject {
     description: string;
     stage: string;
     created_at: string;
+    updated_at: string;
 }
 
-type Selection = IProject | null;
+export type ProjectSelected = IProject | null;
 type Projects = Array<IProject>;
 
 export default function Projects() {
 
     const [projects, setProjects] = React.useState<Projects>([]);
-    const [selection, setSelection] = React.useState<Selection>(null);
+    const [projectSelected, setProjectSelected] = React.useState<ProjectSelected>(null);
     const [pending, setPending] = React.useState<boolean>(true);
     // Context
     const { user } = useUser();
@@ -35,7 +36,7 @@ export default function Projects() {
     }, []);
 
     function fetchData() {
-        setSelection(null);
+        setProjectSelected(null);
         setPending(true);
         api.get('api/projects')
             .then(response => {
@@ -60,37 +61,19 @@ export default function Projects() {
 
     function onSelection(project: IProject) {
         // Remove if already selected
-        if (selection != null && String(selection.id) === String(project.id)) {
-            setSelection(null);
+        if (projectSelected != null && String(projectSelected.id) === String(project.id)) {
+            setProjectSelected(null);
             return;
         }
         // Push if not selected or if selected is different
-        setSelection(project);
-    }
-
-    function setClassName(project_id: string) {
-        if (selection === null || (selection != null && project_id != selection.id)) {
-            return "basis-96 w-96 h-70 cursor-pointer hover:shadow-2xl hover:shadow-blue-500/20 transition-all hover:scale-105 hover:z-50 bg-white border-2 dark:border-stone-800";
-        } else if (project_id === selection.id) {
-            return "basis-96 w-96 h-70 cursor-pointer shadow-2xl shadow-blue-500/20 transition-all scale-105 hover:z-50 bg-white border-2 dark:border-stone-800";
-        }
-    }
-
-    function openProject() {
-        if (selection != null) {
-            if (selection.published) {
-                window.open('/projects/' + selection.id, '_blank');
-            } else {
-                enqueueSnackbar("Projeto não publicado.", { variant: "error" });
-            }
-        }
+        setProjectSelected(project);
     }
 
     return (
         <>
             <SnackbarProvider />
             <div className='flex flex-wrap gap-1 py-5 border-y'>
-                <div className='mx-auto max-w-7xl  grow basis-96'>
+                <div className='mx-auto max-w-7xl grow basis-96'>
                     <div>
                         <div className='mb-2'>
                             <span className='font-bold text-5xl text-stone-800 dark:text-white'>Meus Projetos</span>
@@ -104,8 +87,8 @@ export default function Projects() {
                 </div>
             </div>
 
-            <div className='mx-auto max-w-7xl pb-5'>
-                <ProjectsActions can_create={!!user} can_view={!!selection} fetchData={fetchData} openProject={openProject} />
+            <div className='mx-auto max-w-7xl pb-5 px-2'>
+                <ProjectsActions selection={projectSelected} can_create={!!user} can_update={!!user && !!projectSelected} can_view={!!projectSelected} fetchData={fetchData} />
                 {pending &&
                     <div className='mt-3'>
                         <p className='text-md text-stone-700 dark:text-white text-justify'>Carregando...</p>
@@ -113,7 +96,7 @@ export default function Projects() {
                 }
                 <div className='flex flex-wrap gap-5 mt-5'>
                     {!pending && projects.length > 0 && projects.map((project) =>
-                        <ProjectCard project={project} onSelection={onSelection} setClassName={setClassName} />
+                        <ProjectCard project={project} isSelected={projectSelected?.id === project.id} onSelection={onSelection} />
                     )}
                 </div>
             </div>

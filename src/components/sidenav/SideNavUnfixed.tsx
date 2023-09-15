@@ -1,6 +1,8 @@
+'use client'
+
 import Link from 'next/link';
 import Image from 'next/image';
-import { getSession } from '@auth0/nextjs-auth0/edge';
+import { useUser } from '@auth0/nextjs-auth0/client';
 // Custom
 import { CloseMenuButton } from '../buttons/CloseMenuButton.tsx';
 import { ExitIcon } from '../icons/ExitIcon';
@@ -14,11 +16,10 @@ interface IProps {
 
 export function SideNavUnfixed({ onClose }: IProps) {
 
-    // const { user } = getSession();
-    const user = false;
+    const { user } = useUser();
 
     return (
-        <aside className="fixed top-0 left-0 flex flex-col lg:hidden h-full text-white w-60 py-1 pl-1 flex-shrink-0 overflow-y-auto rounded">
+        <aside className="fixed top-0 left-0 flex flex-col lg:hidden h-full text-white w-60 py-1 pl-1 flex-shrink-0 overflow-y-auto rounded z-50">
             <div
                 className="h-full flex flex-col justify-between bg-stone-900 dark:border p-2 rounded-lg shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px]">
 
@@ -95,8 +96,8 @@ export function SideNavUnfixed({ onClose }: IProps) {
                 </div>
 
                 <div className='w-full flex justify-center items-center gap-3 pb-3'>
-                    <Image width={45} height={45} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="react icon" />
                     <Image width={45} height={45} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" className='bg-white rounded-full' alt="nextjs icon" />
+                    <Image width={45} height={45} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="react icon" />
                     <Image width={45} height={45} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="nodejs icon" />
                 </div>
             </div>

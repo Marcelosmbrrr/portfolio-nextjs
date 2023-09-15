@@ -39,7 +39,7 @@ export default function Home() {
               </div>
               <div>
                 <p className='text-md text-stone-700 dark:text-white text-justify'>
-                  Costumo inventar projetos para reforçar o que já conheço ou para aprender a utilizar tecnologias novas. É verdade que não podemos reter tudo na mesma proporção, aprendemos com a repetição, tenho mais afinidade com algumas tecnologias e menos com outras, mas consigo, se necessário, desenvolver com todas elas.
+                  Essas são as tecnologias que utilizo ou já utilizei. Tenho, naturalmente, mais afinidade com algumas tecnologias e menos com outras, o que é determinado principalmente pela frequência que as utilizo.
                 </p>
               </div>
             </div>
@@ -68,7 +68,18 @@ export default function Home() {
                   <span className='font-semibold dark:text-white'>Frontend Frameworks</span>
                 </div>
                 <div className='h-full w-full text-justify'>
-                  <p className='text-sm dark:text-white'>Trabalho com React há dois anos, e como alternativa utilizo o Vue. Quanto ao angular, conheço o básico.</p>
+                  <p className='text-sm dark:text-white'>Utilizo React há dois anos, e minha alternativa é o Vue. Quanto ao angular, recordo apenas o básico.</p>
+                </div>
+              </div>
+              <div className="flex flex-col p-1 gap-2 basis-72 h-36">
+                <div className='h-auto flex gap-2'>
+                  <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" className='bg-white rounded-full' alt="nextjs icon" />
+                </div>
+                <div className='h-auto'>
+                  <span className='font-semibold dark:text-white'>NextJS</span>
+                </div>
+                <div className='h-full w-full text-justify'>
+                  <p className='text-sm dark:text-white'>Conheço o NextJS, inclusive esse portfolio foi desenvolvido com ele. Saiba mais na página "projetos".</p>
                 </div>
               </div>
               <div className="flex flex-col p-1 gap-2 basis-72 h-36">
@@ -94,7 +105,7 @@ export default function Home() {
                   <span className='font-semibold dark:text-white'>NodeJS</span>
                 </div>
                 <div className='h-full w-full text-justify'>
-                  <p className='text-sm dark:text-white'>Estudei backend com NodeJS criando Apis Rest com Express. Alguns meses depois, testei o Nest e por último o Adonis.</p>
+                  <p className='text-sm dark:text-white'>Estudei o ambiente NodeJS e o desenvolvimento de apis com Express, NestJS e AdonisJs.</p>
                 </div>
               </div>
               <div className="flex flex-col p-1 gap-2 basis-72 h-36">

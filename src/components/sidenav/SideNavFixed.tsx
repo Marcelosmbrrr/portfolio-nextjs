@@ -1,6 +1,8 @@
+'use client'
+
 import Link from 'next/link';
 import Image from 'next/image';
-//import { getSession } from '@auth0/nextjs-auth0';
+import { useUser } from '@auth0/nextjs-auth0/client';
 // Custom
 import { ExitIcon } from '../icons/ExitIcon';
 import { FingerPrintIcon } from '../icons/FingerPrintIcon';
@@ -9,10 +11,7 @@ import { BottleIcon } from '../icons/BottleIcon';
 
 export function SideNavFixed() {
 
-    // @ts-ignore
-    // const { user } = await getSession();
-
-    const user = false;
+    const { user } = useUser();
 
     return (
         <aside className="hidden h-full lg:flex flex-col text-white w-60 py-1 pl-1 flex-shrink-0 overflow-y-auto rounded">
@@ -89,8 +88,8 @@ export function SideNavFixed() {
                 </div>
 
                 <div className='w-full flex justify-center items-center gap-3 pb-3'>
-                    <Image width={45} height={45} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="react icon" />
                     <Image width={45} height={45} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" className='bg-white rounded-full' alt="nextjs icon" />
+                    <Image width={45} height={45} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="react icon" />
                     <Image width={45} height={45} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="nodejs icon" />
                 </div>
             </div>

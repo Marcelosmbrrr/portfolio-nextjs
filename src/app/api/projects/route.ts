@@ -7,7 +7,35 @@ export async function GET(request: Request) {
 
     const projects = await prisma.project.findMany();
 
-    return new Response(JSON.stringify({ projects: projects }), {
+    const payload = projects.map(project => {
+
+        let stage = '';
+        if (project.stage === 1) {
+            stage = 'Planejamento';
+        } else if (project.stage === 2) {
+            stage = 'Desenvolvimento';
+        } else if (project.stage === 3) {
+            stage = 'Concluído';
+        } else {
+            stage = 'Publicado';
+        }
+
+        return {
+            id: project.id,
+            name: project.name,
+            description: project.description,
+            published: project.published,
+            stage: stage,
+            technologies: project.technologies,
+            content: project.content,
+            image: project.image,
+            created_at: project.created_at,
+            updated_at: project.updated_at
+        }
+
+    });
+
+    return new Response(JSON.stringify({ projects: payload }), {
         status: 200
     });
 }
