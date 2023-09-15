@@ -79,7 +79,7 @@ export default function Home() {
                   <span className='font-semibold dark:text-white'>NextJS</span>
                 </div>
                 <div className='h-full w-full text-justify'>
-                  <p className='text-sm dark:text-white'>Conheço o NextJS, inclusive esse portfolio foi desenvolvido com ele. Saiba mais na página "projetos".</p>
+                  <p className='text-sm dark:text-white'>Conheço o NextJS, inclusive esse portfolio foi desenvolvido com ele. Saiba mais na página dos projetos.</p>
                 </div>
               </div>
               <div className="flex flex-col p-1 gap-2 basis-72 h-36">

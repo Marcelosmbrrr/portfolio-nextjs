@@ -11,7 +11,7 @@ interface IProps {
     project_id: string
 }
 
-export const DeleteResource = React.memo((props: IProps) => {
+export function DeleteResource(props: IProps) {
 
     const [open, setOpen] = React.useState(false);
     const [pending, setPending] = React.useState(false);
@@ -76,4 +76,4 @@ export const DeleteResource = React.memo((props: IProps) => {
             }
         </>
     )
-}); 
+}
