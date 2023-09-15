@@ -18,7 +18,19 @@ export async function GET(request: Request, { params }: { params: { id: string }
         });
     }
 
-    return new Response(JSON.stringify({ project: project }), {
+    const payload = {
+        id: project.id,
+        name: project.name,
+        description: project.description,
+        published: project.published,
+        technologies: project.technologies,
+        content: project.content,
+        image: project.image + '/img1.png', // TODO: Change this to an array of images
+        created_at: project.created_at,
+        updated_at: project.updated_at
+    }
+
+    return new Response(JSON.stringify({ project: payload }), {
         status: 200
     });
 }

@@ -21,7 +21,7 @@ async function main() {
                 technologies: 'NextJS, Tailwind CSS, Auth0 e Vercel',
                 description: 'Uma aplicação de portfolio para mostrar minhas habilidades, estudos e projetos.',
                 content: project1_content,
-                image: '/images/projects/fe58602a-158b-4d3d-bd8a-8aae1833fee9.png',
+                image: '/images/projects/fe58602a-158b-4d3d-bd8a-8aae1833fee9',
                 stage: 4
             },
             {
@@ -30,7 +30,7 @@ async function main() {
                 technologies: 'Laravel, Inertia, VueJS, Tailwind CSS e AWS',
                 description: 'Uma aplicação para criar páginas de venda estáticas para conversão. Uma solução simples para quem tem pressa e não quer perder tempo.',
                 content: project2_content,
-                image: '/images/projects/dbb5ca45-05a5-464f-844e-e2f60d6d31dd.png',
+                image: '/images/projects/dbb5ca45-05a5-464f-844e-e2f60d6d31dd',
                 stage: 1
             }
         ]

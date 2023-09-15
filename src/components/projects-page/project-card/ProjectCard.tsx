@@ -30,6 +30,10 @@ export function ProjectCard({ project, onSelection, isSelected }: IProps) {
         }
     }
 
+    function formatDate(date: string) {
+        return new Date(date).getDay() + '/' + new Date(date).getMonth() + '/' + new Date(date).getFullYear();
+    }
+
     return (
         <div onClick={() => onSelection(project)} className={setClassName()} key={project.id}>
             <div className='relative h-40 overflow-y-hidden'>
@@ -52,7 +56,7 @@ export function ProjectCard({ project, onSelection, isSelected }: IProps) {
                         <span className='text-xs dark:text-white text-stone-950'>Tecnologias: {project.technologies}</span>
                     </div>
                     <div className='dark:bg-stone-950'>
-                        <span className='text-xs dark:text-white text-stone-950'>Postado em: {project.created_at} | Última atualização: {project.updated_at}</span>
+                        <span className='text-xs dark:text-white text-stone-950'>Postado em: {formatDate(project.created_at)} | Última atualização: {formatDate(project.updated_at)}</span>
                     </div>
                 </div>
             </div>

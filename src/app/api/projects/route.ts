@@ -28,7 +28,7 @@ export async function GET(request: Request) {
             stage: stage,
             technologies: project.technologies,
             content: project.content,
-            image: project.image,
+            image: project.image + '/img1.png', // TODO: Change this to an array of images
             created_at: project.created_at,
             updated_at: project.updated_at
         }
