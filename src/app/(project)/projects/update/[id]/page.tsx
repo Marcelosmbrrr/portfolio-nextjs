@@ -53,6 +53,7 @@ export default withPageAuthRequired(function Project() {
 
     React.useEffect(() => {
         fetchData();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     function fetchData() {

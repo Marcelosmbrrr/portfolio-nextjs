@@ -33,6 +33,7 @@ export default function Projects() {
 
     React.useEffect(() => {
         fetchData();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     function fetchData() {
