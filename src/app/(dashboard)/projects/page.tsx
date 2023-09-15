@@ -97,7 +97,7 @@ export default function Projects() {
                 }
                 <div className='flex flex-wrap gap-5 mt-5'>
                     {!pending && projects.length > 0 && projects.map((project) =>
-                        <ProjectCard project={project} isSelected={projectSelected?.id === project.id} onSelection={onSelection} />
+                        <ProjectCard project={project} isSelected={projectSelected?.id === project.id} onSelection={onSelection} key={project.id} />
                     )}
                 </div>
             </div>

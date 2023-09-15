@@ -35,7 +35,7 @@ export function ProjectCard({ project, onSelection, isSelected }: IProps) {
     }
 
     return (
-        <div onClick={() => onSelection(project)} className={setClassName()} key={project.id}>
+        <div onClick={() => onSelection(project)} className={setClassName()}>
             <div className='relative h-40 overflow-y-hidden'>
                 <Image src={project.image} fill={true} alt='project image' />
             </div>
