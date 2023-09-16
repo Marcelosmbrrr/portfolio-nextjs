@@ -7,6 +7,7 @@ export async function GET(request: Request) {
 
     const projects = await prisma.project.findMany();
 
+    // @ts-ignore
     const payload = projects.map(project => {
 
         let stage = '';
