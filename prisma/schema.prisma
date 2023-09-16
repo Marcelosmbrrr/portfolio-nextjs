@@ -16,7 +16,7 @@ model Project {
   stage        Int
   technologies String
   description  String
-  content      Json
+  content      String[]
   image        String
   created_at   DateTime @default(now())
   updated_at   DateTime @updatedAt
