@@ -28,7 +28,7 @@ export function Carousel({ images }: IProps) {
 
     if (images) {
         return (
-            <div className='flex my-5 h-[450px]'>
+            <div className='hidden md:flex my-5 h-[450px]'>
 
                 <div className='flex items-center justify-center px-2'>
                     <button onClick={prevImage} type="button" className="cursor-pointer" data-carousel-prev>
