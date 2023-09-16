@@ -11,7 +11,7 @@ import { ProjectsActions } from '@/components/projects-page/project-actions/Proj
 interface IProject {
     id: string;
     published: boolean;
-    image: string;
+    images: string[];
     name: string;
     technologies: string;
     description: string;

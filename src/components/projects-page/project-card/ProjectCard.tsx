@@ -5,7 +5,7 @@ import Image from 'next/image';
 interface IProject {
     id: string;
     published: boolean;
-    image: string;
+    images: string[];
     name: string;
     technologies: string;
     description: string;
@@ -37,7 +37,7 @@ export function ProjectCard({ project, onSelection, isSelected }: IProps) {
     return (
         <div onClick={() => onSelection(project)} className={setClassName()}>
             <div className='relative h-40 overflow-y-hidden'>
-                <Image src={project.image} fill={true} alt='project image' />
+                <Image src={"/images/projects/" + project.images[0]} fill={true} alt='project image' />
             </div>
             <div className='p-1'>
                 <div className='text-stone-950 dark:text-white dark:bg-stone-950 pt-2'>

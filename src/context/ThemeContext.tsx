@@ -48,7 +48,7 @@ export function ThemeProvider({ children }: PropsWithChildren) {
 
     function ThemeButton() {
         return (
-            <button onClick={toggle} type="button" className="text-black dark:text-white font-medium rounded-lg text-sm p-1 text-center inline-flex items-center mr-2">
+            <button onClick={toggle} type="button" className="text-black dark:text-white hover:text-cyan-400 dark:hover:text-cyan-400 font-medium rounded-lg text-sm p-1 text-center inline-flex items-center mr-2">
                 <Icon />
             </button>
         )

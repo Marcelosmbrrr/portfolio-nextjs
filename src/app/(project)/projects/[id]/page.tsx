@@ -5,11 +5,12 @@ import { useParams } from 'next/navigation'
 // Custom
 import { useTheme } from '@/context/ThemeContext';
 import { api } from '@/services/api';
+import { Carousel } from '@/components/carousel/Carousel';
 
 interface Project {
     id: string;
     published: boolean;
-    image: string;
+    images: string[];
     name: string;
     technologies: string;
     description: string;
@@ -33,7 +34,7 @@ export default function Project() {
     }, []);
 
     function fetchData() {
-        api.get(`api/projects/${params.id}`)
+        api.get(`/api/projects/${params.id}`)
             .then(response => {
                 setProject(response.data.project);
             })
@@ -44,10 +45,6 @@ export default function Project() {
             .finally(() => {
                 setPending(false);
             })
-    }
-
-    function closePage() {
-        window.close();
     }
 
     function renderContent() {
@@ -63,10 +60,10 @@ export default function Project() {
     }
 
     return (
-        <div className='h-screen dark:bg-stone-950'>
+        <div className='h-auto dark:bg-stone-950'>
 
             <header className='h-14 px-2 flex justify-between items-center'>
-                <button onClick={closePage} className="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white dark:bg-stone-950 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-cyan-400 dark:hover:text-cyan-400 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700">
+                <button onClick={() => window.close()} className="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white dark:bg-stone-950 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-cyan-400 dark:hover:text-cyan-400 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700">
                     Voltar
                 </button>
                 <div>
@@ -90,10 +87,8 @@ export default function Project() {
             </div>
 
             <div className='mx-auto max-w-7xl p-5'>
-                <div className='mt-3 w-full h-[450px] border border-gray-300 rounded-lg' style={{ backgroundImage: "url(" + project.image + ")", backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
-                    {/* project img */}
-                </div>
-                <div className='mt-2'>
+                <Carousel images={project.images} />
+                <div>
                     {renderContent()}
                 </div>
             </div>
@@ -101,12 +96,3 @@ export default function Project() {
         </div>
     )
 }
-
-/*
-async function getData() {
-    
-    // Get project
-   
-    return res.json()
-}
-*/

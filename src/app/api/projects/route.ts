@@ -29,6 +29,17 @@ export async function GET(request: Request) {
             stage = 'Publicado';
         }
 
+        let images: string[] = [];
+        if (project.image.includes('&')) {
+            const folder = project.image.split('&')[0];
+            const images_quantity = project.image.split('&')[1];
+            for (let i = 1; i <= Number(images_quantity); i++) {
+                images.push(folder + '/img' + i + '.png');
+            }
+        } else {
+            images = [project.image + '/img1.png'];
+        }
+
         return {
             id: project.id,
             name: project.name,
@@ -37,7 +48,7 @@ export async function GET(request: Request) {
             stage: stage,
             technologies: project.technologies,
             content: project.content,
-            image: project.image + '/img1.png', // TODO: Change this to an array of images
+            images: images, // TODO: Change this to an array of images
             created_at: project.created_at,
             updated_at: project.updated_at
         }
