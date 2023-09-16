@@ -7,69 +7,77 @@ export async function GET(request: Request) {
 
     const projects = await prisma.project.findMany();
 
-    // @ts-ignore
-    const payload = projects.map(project => {
+    if (!projects) {
+        return new Response(JSON.stringify({
+            message: 'Nenhum projeto encontrado!'
+        }), {
+            status: 404
+        });
+    }
 
-        let stage = '';
-        if (project.stage === 1) {
-            stage = 'Planejamento';
-        } else if (project.stage === 2) {
-            stage = 'Desenvolvimento';
-        } else if (project.stage === 3) {
-            stage = 'Concluído';
-        } else {
-            stage = 'Publicado';
-        }
+        // @ts-ignore
+        const payload = projects.map(project => {
 
-        return {
-            id: project.id,
-            name: project.name,
-            description: project.description,
-            published: project.published,
-            stage: stage,
-            technologies: project.technologies,
-            content: project.content,
-            image: project.image + '/img1.png', // TODO: Change this to an array of images
-            created_at: project.created_at,
-            updated_at: project.updated_at
-        }
+            let stage = '';
+            if (project.stage === 1) {
+                stage = 'Planejamento';
+            } else if (project.stage === 2) {
+                stage = 'Desenvolvimento';
+            } else if (project.stage === 3) {
+                stage = 'Concluído';
+            } else {
+                stage = 'Publicado';
+            }
 
-    });
+            return {
+                id: project.id,
+                name: project.name,
+                description: project.description,
+                published: project.published,
+                stage: stage,
+                technologies: project.technologies,
+                content: project.content,
+                image: project.image + '/img1.png', // TODO: Change this to an array of images
+                created_at: project.created_at,
+                updated_at: project.updated_at
+            }
 
-    return new Response(JSON.stringify({ projects: payload }), {
-        status: 200
-    });
-}
+        });
 
-export async function POST(request: Request) {
+        return new Response(JSON.stringify({ projects: payload }), {
+            status: 200
+        });
+    }
 
-    const { name, description, published, stage, technologies, content, image } = await request.json();
+    export async function POST(request: Request) {
 
-    // Get image filename
-    const image_filename = '';
+        const { name, description, published, stage, technologies, content, image } = await request.json();
 
-    // Save image to public/img/projects
-    // const image_path = path.join(process.cwd(), 'public/img/projects', image_filename);
+        // Get image filename
+        const image_filename = '';
 
-    const image_path = '';
+        // Save image to public/img/projects
+        // const image_path = path.join(process.cwd(), 'public/img/projects', image_filename);
 
-    const project = await prisma.project.create({
-        data: {
-            name: name,
-            description: description,
-            published: published,
-            stage: stage,
-            technologies: technologies,
-            content: content,
-            image: image_path
-        }
-    });
+        const image_path = '';
 
-    return new Response(JSON.stringify({
-        message: 'Projeto criado com sucesso!',
-        project: project
-    }), {
-        status: 200
-    });
+        const project = await prisma.project.create({
+            data: {
+                name: name,
+                description: description,
+                published: published,
+                stage: stage,
+                technologies: technologies,
+                content: content,
+                image: image_path
+            }
+        });
 
-}
+        return new Response(JSON.stringify({
+            message: 'Projeto criado com sucesso!',
+            project: project
+        }), {
+            status: 200
+        });
+
+    }
