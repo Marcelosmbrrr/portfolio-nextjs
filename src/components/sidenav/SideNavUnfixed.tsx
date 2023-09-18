@@ -29,7 +29,7 @@ export function SideNavUnfixed({ onClose }: IProps) {
 
                     <div className="w-full flex justify-center items-center gap-5 h-10">
                         <div className='flex items-center gap-1'>
-                            <span className="text-md font-semibold dark:text-white">MarceloSMBR</span>
+                            <span className="text-md font-semibold dark:text-white">SMBR</span>
                         </div>
                     </div>
 

@@ -68,7 +68,7 @@ export default function Home() {
                   <span className='font-semibold dark:text-white'>Frontend Frameworks</span>
                 </div>
                 <div className='h-full w-full text-justify'>
-                  <p className='text-sm dark:text-white'>Utilizo React há dois anos, e minha alternativa é o Vue. Quanto ao angular, recordo apenas o básico.</p>
+                  <p className='text-sm dark:text-white'>Utilizo React há dois anos, e minha alternativa é o Vue. Quanto ao angular, estudei o básico.</p>
                 </div>
               </div>
               <div className="flex flex-col p-1 gap-2 basis-72 h-36">
@@ -164,7 +164,7 @@ export default function Home() {
                   <div className='h-auto flex gap-2'>
                     <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt='github actions icon' />
                     <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt='jenkins icon' />
-                    <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" alt='github actions icon' />
+                    <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" className='dark:bg-white dark:rounded-full' alt='github actions icon' />
                   </div>
                   <div className='h-auto'>
                     <span className='font-semibold dark:text-white'>Agile e CI/CD</span>
