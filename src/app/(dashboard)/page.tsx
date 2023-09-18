@@ -162,6 +162,19 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col p-1 gap-2 basis-72 h-36">
                   <div className='h-auto flex gap-2'>
+                    <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt='github actions icon' />
+                    <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt='jenkins icon' />
+                    <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" alt='github actions icon' />
+                  </div>
+                  <div className='h-auto'>
+                    <span className='font-semibold dark:text-white'>Agile e CI/CD</span>
+                  </div>
+                  <div className='h-full w-full text-justify'>
+                    <p className='text-sm dark:text-white'>O entendimento de pipelines de produção se tornou uma profunda necessidade. Essa fase inclui métodos ágeis, cobertura de testes, técnicas e ferramentas de automação.</p>
+                  </div>
+                </div>
+                <div className="flex flex-col p-1 gap-2 basis-72 h-36">
+                  <div className='h-auto flex gap-2'>
                     <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt='kafka icon' />
                     <Image width={28} height={28} src="/images/icons/rabbit.png" alt='rabbitmq icon' />
                   </div>
