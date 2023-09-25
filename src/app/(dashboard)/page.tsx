@@ -23,7 +23,7 @@ export default function Home() {
             </div>
             <div>
               <a href='https://www.linkedin.com/in/marcelosmbr/' target='_blank' className="py-2.5 px-5 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white dark:bg-stone-950 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-cyan-400 dark:hover:text-cyan-400 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700">
-                Linkedln
+                Linkedin
               </a>
             </div>
             <div>
