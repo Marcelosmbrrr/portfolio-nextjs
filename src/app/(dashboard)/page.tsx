@@ -168,7 +168,6 @@ export default function Home() {
                 <div className="flex flex-col p-1 gap-2 basis-72 h-36">
                   <div className='h-auto flex gap-2'>
                     <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt='github actions icon' />
-                    <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt='jenkins icon' />
                     <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" className='dark:bg-white dark:rounded-full' alt='github actions icon' />
                   </div>
                   <div className='h-auto'>
