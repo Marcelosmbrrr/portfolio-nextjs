@@ -162,7 +162,7 @@ export default function Home() {
                     <span className='font-semibold dark:text-white'>Amazon AWS</span>
                   </div>
                   <div className='h-full w-full text-justify'>
-                    <p className='text-sm dark:text-white'>Além de ter a curiosidade de estudar e conhecer os serviços da AWS, noto que é uma exigência do mercado.</p>
+                    <p className='text-sm dark:text-white'>Pretendo consolidar a AWS como minha principal opção de Cloud Hosting.</p>
                   </div>
                 </div>
                 <div className="flex flex-col p-1 gap-2 basis-72 h-36">
@@ -174,7 +174,7 @@ export default function Home() {
                     <span className='font-semibold dark:text-white'>Agile e CI/CD</span>
                   </div>
                   <div className='h-full w-full text-justify'>
-                    <p className='text-sm dark:text-white'>O entendimento de pipelines de produção se tornou uma profunda necessidade. Essa fase inclui métodos ágeis, cobertura de testes, técnicas e ferramentas de automação.</p>
+                    <p className='text-sm dark:text-white'>O entendimento de pipelines para integração e entrega contínuas se tornou uma profunda necessidade, além de ser uma exigência do mercado.</p>
                   </div>
                 </div>
                 <div className="flex flex-col p-1 gap-2 basis-72 h-36">
@@ -186,7 +186,18 @@ export default function Home() {
                     <span className='font-semibold dark:text-white'>Java e Spring</span>
                   </div>
                   <div className='h-full w-full text-justify'>
-                    <p className='text-sm dark:text-white'>Tenho curiosidade a respeito do desenvolvimento backend com Java, e também percebo que é muito utilizado no mercado.</p>
+                    <p className='text-sm dark:text-white'>Ao lado do PHP e NodeJS, pretendo incluir também o Java como conhecimento para desenvolvimento backend.</p>
+                  </div>
+                </div>
+                <div className="flex flex-col p-1 gap-2 basis-72 h-36">
+                  <div className='h-auto flex gap-2'>
+                    <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt='java icon' />
+                  </div>
+                  <div className='h-auto'>
+                    <span className='font-semibold dark:text-white'>NoSQL</span>
+                  </div>
+                  <div className='h-full w-full text-justify'>
+                    <p className='text-sm dark:text-white'>Apesar de já ter utilizado em projetos pessoais, como com Express e Firebase, pretendo estudar melhor essa tecnologia em breve com MongoDB e DynamoDB.</p>
                   </div>
                 </div>
                 <div className="flex flex-col p-1 gap-2 basis-72 h-36">
@@ -210,17 +221,6 @@ export default function Home() {
                   </div>
                   <div className='h-full w-full text-justify'>
                     <p className='text-sm dark:text-white'>Tenho curiosidade sobre o desenvolvimento mobile. No futuro pretendo estudar essa tecnologia.</p>
-                  </div>
-                </div>
-                <div className="flex flex-col p-1 gap-2 basis-72 h-36">
-                  <div className='h-auto flex gap-2'>
-                    <Image width={28} height={28} src="/images/icons/livewire.png" alt='livewire icon' />
-                  </div>
-                  <div className='h-auto'>
-                    <span className='font-semibold dark:text-white'>Livewire</span>
-                  </div>
-                  <div className='h-full w-full text-justify'>
-                    <p className='text-sm dark:text-white'>Essa tecnologia me despertou interesse porque é possível oferecer uma experiência SPA com o desenvolvimento server-side utilizando Laravel.</p>
                   </div>
                 </div>
               </div>
