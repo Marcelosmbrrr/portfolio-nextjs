@@ -97,7 +97,7 @@ export default function Home() {
                   <span className='font-semibold dark:text-white'>PHP</span>
                 </div>
                 <div className='h-full w-full text-justify'>
-                  <p className='text-sm dark:text-white'>Trabalho com PHP e Laravel há dois anos. Quanto ao CodeIgniter, conheço o básico que estudei por curiosidade.</p>
+                  <p className='text-sm dark:text-white'>Trabalho com PHP e Laravel há dois anos.</p>
                 </div>
               </div>
               <div className="flex flex-col p-1 gap-2 basis-72 h-36">
@@ -197,7 +197,7 @@ export default function Home() {
                     <span className='font-semibold dark:text-white'>NoSQL</span>
                   </div>
                   <div className='h-full w-full text-justify'>
-                    <p className='text-sm dark:text-white'>Apesar de já ter utilizado em projetos pessoais, como com Express e Firebase, pretendo estudar melhor essa tecnologia em breve com MongoDB e DynamoDB.</p>
+                    <p className='text-sm dark:text-white'>Apesar de já ter utilizado em projetos pessoais, como com Express e Firebase, pretendo estudar melhor essa tecnologia em breve.</p>
                   </div>
                 </div>
                 <div className="flex flex-col p-1 gap-2 basis-72 h-36">
