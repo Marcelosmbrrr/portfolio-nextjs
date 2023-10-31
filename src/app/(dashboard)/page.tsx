@@ -91,7 +91,6 @@ export default function Home() {
                 <div className='h-auto flex gap-2'>
                   <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt='php icon' />
                   <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" alt='laravel icon' />
-                  <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain-wordmark.svg" alt='codeigniter icon' />
                 </div>
                 <div className='h-auto'>
                   <span className='font-semibold dark:text-white'>PHP</span>
