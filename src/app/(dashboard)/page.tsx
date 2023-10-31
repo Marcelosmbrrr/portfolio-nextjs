@@ -129,10 +129,21 @@ export default function Home() {
                   <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" alt='docker icon' />
                 </div>
                 <div className='h-auto'>
-                  <span className='font-semibold dark:text-white'>DevOps</span>
+                  <span className='font-semibold dark:text-white'>Containers</span>
                 </div>
                 <div className='h-full w-full text-justify'>
-                  <p className='text-sm dark:text-white'>Estudei Docker e passei a utilizá-lo no trabalho por iniciativa própria até agora. A experiência me demonstrou que é uma ferramenta necessária.</p>
+                  <p className='text-sm dark:text-white'>Nesse escopo, por enquanto estudei Docker para ambiente de desenvolvimento. O dia a dia mostrou que era uma ferramenta necessária.</p>
+                </div>
+              </div>
+              <div className="flex flex-col p-1 gap-2 basis-72 h-36">
+                <div className='h-auto flex gap-2'>
+                  <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg" alt='digital-ocean icon' />
+                </div>
+                <div className='h-auto'>
+                  <span className='font-semibold dark:text-white'>Cloud Hosting</span>
+                </div>
+                <div className='h-full w-full text-justify'>
+                  <p className='text-sm dark:text-white'>Tive experiência até agora com o Digital Ocean para hospedagem de aplicações.</p>
                 </div>
               </div>
             </div>
@@ -185,7 +196,7 @@ export default function Home() {
                     <span className='font-semibold dark:text-white'>Java e Spring</span>
                   </div>
                   <div className='h-full w-full text-justify'>
-                    <p className='text-sm dark:text-white'>Ao lado do PHP e NodeJS, pretendo incluir também o Java como conhecimento para desenvolvimento backend.</p>
+                    <p className='text-sm dark:text-white'>Pretendo incluir o Java como tecnologia para desenvolvimento backend.</p>
                   </div>
                 </div>
                 <div className="flex flex-col p-1 gap-2 basis-72 h-36">
@@ -196,7 +207,7 @@ export default function Home() {
                     <span className='font-semibold dark:text-white'>NoSQL</span>
                   </div>
                   <div className='h-full w-full text-justify'>
-                    <p className='text-sm dark:text-white'>Apesar de já ter utilizado em projetos pessoais, como com Express e Firebase, pretendo estudar melhor essa tecnologia em breve.</p>
+                    <p className='text-sm dark:text-white'>Apesar de ter tido contato, julgo que não foi o suficiente, por isso pretendo estudar essa tecnologia no futuro.</p>
                   </div>
                 </div>
                 <div className="flex flex-col p-1 gap-2 basis-72 h-36">
@@ -208,7 +219,7 @@ export default function Home() {
                     <span className='font-semibold dark:text-white'>Microserviços</span>
                   </div>
                   <div className='h-full w-full text-justify'>
-                    <p className='text-sm dark:text-white'>Tenho curiosidade em estudar microserviços e tecnologias de mensageria, além de também ser uma exigência do mercado.</p>
+                    <p className='text-sm dark:text-white'>Microserviços e mensageria são exigências do mercado, e por isso pretendo estudar isso em breve.</p>
                   </div>
                 </div>
                 <div className="flex flex-col p-1 gap-2 basis-72 h-36">
@@ -219,7 +230,7 @@ export default function Home() {
                     <span className='font-semibold dark:text-white'>React Native</span>
                   </div>
                   <div className='h-full w-full text-justify'>
-                    <p className='text-sm dark:text-white'>Tenho curiosidade sobre o desenvolvimento mobile. No futuro pretendo estudar essa tecnologia.</p>
+                    <p className='text-sm dark:text-white'>Desenvolvimento mobile é uma curiosidade e não uma necessidade. Pretendo conhecer o básico no futuro.</p>
                   </div>
                 </div>
               </div>
