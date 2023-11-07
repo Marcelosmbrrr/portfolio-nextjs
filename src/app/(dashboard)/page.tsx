@@ -189,6 +189,17 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col p-1 gap-2 basis-72 h-36">
                   <div className='h-auto flex gap-2'>
+                    <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg" alt='terraform icon' />
+                  </div>
+                  <div className='h-auto'>
+                    <span className='font-semibold dark:text-white'>IaC com Terraform</span>
+                  </div>
+                  <div className='h-full w-full text-justify'>
+                    <p className='text-sm dark:text-white'>Para estudar infraestrutura como código pretendo utilizar o Terraform.</p>
+                  </div>
+                </div>
+                <div className="flex flex-col p-1 gap-2 basis-72 h-36">
+                  <div className='h-auto flex gap-2'>
                     <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" alt='java icon' />
                     <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original-wordmark.svg" alt='spring icon' />
                   </div>
