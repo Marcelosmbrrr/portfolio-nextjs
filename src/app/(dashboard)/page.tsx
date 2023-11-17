@@ -127,23 +127,15 @@ export default function Home() {
               <div className="flex flex-col p-1 gap-2 basis-72 h-36">
                 <div className='h-auto flex gap-2'>
                   <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" alt='docker icon' />
-                </div>
-                <div className='h-auto'>
-                  <span className='font-semibold dark:text-white'>Containers</span>
-                </div>
-                <div className='h-full w-full text-justify'>
-                  <p className='text-sm dark:text-white'>Nesse escopo, por enquanto estudei Docker para ambiente de desenvolvimento. O dia a dia mostrou que era uma ferramenta necessária.</p>
-                </div>
-              </div>
-              <div className="flex flex-col p-1 gap-2 basis-72 h-36">
-                <div className='h-auto flex gap-2'>
+                  <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt='github actions icon' />
+                  <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" className='dark:bg-white dark:rounded-full' alt='github actions icon' />
                   <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg" alt='digital-ocean icon' />
                 </div>
                 <div className='h-auto'>
-                  <span className='font-semibold dark:text-white'>Cloud Hosting</span>
+                  <span className='font-semibold dark:text-white'>DevOps</span>
                 </div>
                 <div className='h-full w-full text-justify'>
-                  <p className='text-sm dark:text-white'>Tive experiência até agora com o Digital Ocean para hospedagem de aplicações.</p>
+                  <p className='text-sm dark:text-white'>Nesse escopo tenho conhecimento em Agile, Docker, CI/CD com Github Actions e Cloud Hosting com Digital Ocean.</p>
                 </div>
               </div>
             </div>
@@ -169,7 +161,7 @@ export default function Home() {
                     <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt='aws icon' />
                   </div>
                   <div className='h-auto'>
-                    <span className='font-semibold dark:text-white'>Amazon AWS</span>
+                    <span className='font-semibold dark:text-white'>DevOps: AWS</span>
                   </div>
                   <div className='h-full w-full text-justify'>
                     <p className='text-sm dark:text-white'>Pretendo consolidar a AWS como minha principal opção de Cloud Hosting.</p>
@@ -177,25 +169,24 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col p-1 gap-2 basis-72 h-36">
                   <div className='h-auto flex gap-2'>
-                    <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt='github actions icon' />
-                    <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" className='dark:bg-white dark:rounded-full' alt='github actions icon' />
+                    <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg" alt='terraform icon' />
                   </div>
                   <div className='h-auto'>
-                    <span className='font-semibold dark:text-white'>Agile e CI/CD</span>
+                    <span className='font-semibold dark:text-white'>DevOps: IaC</span>
                   </div>
                   <div className='h-full w-full text-justify'>
-                    <p className='text-sm dark:text-white'>O entendimento de pipelines para integração e entrega contínuas se tornou uma profunda necessidade, além de ser uma exigência do mercado.</p>
+                    <p className='text-sm dark:text-white'>Pretendo estudar Infrastructure as Code com Terraform e Ansible.</p>
                   </div>
                 </div>
                 <div className="flex flex-col p-1 gap-2 basis-72 h-36">
                   <div className='h-auto flex gap-2'>
-                    <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg" alt='terraform icon' />
+                    <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt='java icon' />
                   </div>
                   <div className='h-auto'>
-                    <span className='font-semibold dark:text-white'>IaC com Terraform</span>
+                    <span className='font-semibold dark:text-white'>Banco de dados: NoSQL</span>
                   </div>
                   <div className='h-full w-full text-justify'>
-                    <p className='text-sm dark:text-white'>Para estudar infraestrutura como código pretendo utilizar o Terraform.</p>
+                    <p className='text-sm dark:text-white'>Apesar de ter tido contato, julgo que não foi o suficiente, por isso pretendo estudar essa tecnologia no futuro.</p>
                   </div>
                 </div>
                 <div className="flex flex-col p-1 gap-2 basis-72 h-36">
@@ -204,21 +195,10 @@ export default function Home() {
                     <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original-wordmark.svg" alt='spring icon' />
                   </div>
                   <div className='h-auto'>
-                    <span className='font-semibold dark:text-white'>Java e Spring</span>
+                    <span className='font-semibold dark:text-white'>Backend: Java e Spring</span>
                   </div>
                   <div className='h-full w-full text-justify'>
                     <p className='text-sm dark:text-white'>Pretendo incluir o Java como tecnologia para desenvolvimento backend.</p>
-                  </div>
-                </div>
-                <div className="flex flex-col p-1 gap-2 basis-72 h-36">
-                  <div className='h-auto flex gap-2'>
-                    <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt='java icon' />
-                  </div>
-                  <div className='h-auto'>
-                    <span className='font-semibold dark:text-white'>NoSQL</span>
-                  </div>
-                  <div className='h-full w-full text-justify'>
-                    <p className='text-sm dark:text-white'>Apesar de ter tido contato, julgo que não foi o suficiente, por isso pretendo estudar essa tecnologia no futuro.</p>
                   </div>
                 </div>
                 <div className="flex flex-col p-1 gap-2 basis-72 h-36">
@@ -227,7 +207,7 @@ export default function Home() {
                     <Image width={28} height={28} src="/images/icons/rabbit.png" alt='rabbitmq icon' />
                   </div>
                   <div className='h-auto'>
-                    <span className='font-semibold dark:text-white'>Microserviços</span>
+                    <span className='font-semibold dark:text-white'>Arquitetura: Microserviços</span>
                   </div>
                   <div className='h-full w-full text-justify'>
                     <p className='text-sm dark:text-white'>Microserviços e mensageria são exigências do mercado, e por isso pretendo estudar isso em breve.</p>
@@ -238,7 +218,7 @@ export default function Home() {
                     <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt='react icon' />
                   </div>
                   <div className='h-auto'>
-                    <span className='font-semibold dark:text-white'>React Native</span>
+                    <span className='font-semibold dark:text-white'>Mobile: React Native</span>
                   </div>
                   <div className='h-full w-full text-justify'>
                     <p className='text-sm dark:text-white'>Desenvolvimento mobile é uma curiosidade e não uma necessidade. Pretendo conhecer o básico no futuro.</p>
