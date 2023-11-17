@@ -170,6 +170,7 @@ export default function Home() {
                 <div className="flex flex-col p-1 gap-2 basis-72 h-36">
                   <div className='h-auto flex gap-2'>
                     <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg" alt='terraform icon' />
+                    <Image width={28} height={28} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg" alt='ansible icon' />
                   </div>
                   <div className='h-auto'>
                     <span className='font-semibold dark:text-white'>DevOps: IaC</span>
